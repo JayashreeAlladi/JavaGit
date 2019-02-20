@@ -15,11 +15,26 @@ public class Diagonalsum {
 				    if(i==j) {
 				    	sum1=sum1+a[i][j];//right side diagonal
 				    }
-				  
-			     }
-				
+			    }
 			}
-		 System.out.println(sum1);
+		 for (int i = 0; i < row; i++) 
+			{
+				 for (int j = 0; j<col; j++) 
+				 {
+				        if(i==col-j-1) {
+				    	sum2=sum2+a[i][j];//left side diagonal
+				        }
+			    }
+			}
+		 System.out.println("right diagonal sum is:"+sum1);
+		 System.out.println("left diagonal sum is:"+sum2);
+		 int result=sum1-sum2;
+		 if(result<0) {
+			   System.out.println(~(result));
+		 }
+		 else {
+		 System.out.println("difference is:"+result);
+		 }
 	 }
 	
 	public static  void main(String[] args) {
